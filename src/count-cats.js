@@ -1,4 +1,19 @@
-module.exports = function countCats(/* matrix */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function countCats(matrix) {
+  var earsOfcat = "^^";
+  var cats = 0;
+ 
+  for (var row = 0; row < matrix.length; row++) { 
+
+    for (col = 0; col < matrix[row].length; col++) {
+        if (matrix[row][col] === earsOfcat) cats++;
+    }
+  }
+  return cats;
 };
+
+
+//создаем переменную ушей, по которой будем определять кол-во котов;
+//создаем переменную, в которую будем записывать количество котов;
+//для перебора многомерного массива (матрицы) используем вложенный цикл;
+//внешний цикл проходит по строкам, а внутренний по каждому элементу ряда;
+//если элемент уши кота - добавляем в счетчик одного кота и т.д.
